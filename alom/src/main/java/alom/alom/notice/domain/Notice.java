@@ -1,2 +1,4 @@
-package alom.alom.notice.domain;public class Notice {
+package alom.alom.notice.domain;
+
+public class Notice {
 }
