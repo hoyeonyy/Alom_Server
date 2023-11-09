@@ -10,6 +10,6 @@ public class Attendence {
     @GeneratedValue
     private Long attendenceId;
     private Week week;
-    private LocalDateTime createAt;
+    private LocalDateTime createdAt;
 
 }
