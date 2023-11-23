@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Attendance {
@@ -14,7 +15,7 @@ public class Attendance {
     private Long attendanceId;
 
     @OneToMany(mappedBy = "attendance")
-    private List<User> users;
+    private List<User> users = new ArrayList<>();
 
     private Week week;
     private LocalDateTime createdAt;
