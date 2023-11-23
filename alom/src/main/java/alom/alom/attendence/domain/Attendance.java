@@ -1,14 +1,21 @@
 package alom.alom.attendence.domain;
 
+import alom.alom.user.domain.User;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import java.time.LocalDateTime;
+import java.util.List;
 
-public class Attendence {
+public class Attendance {
 
     @Id
     @GeneratedValue
-    private Long attendenceId;
+    private Long attendanceId;
+
+    @OneToMany(mappedBy = "attendance")
+    private List<User> users;
+
     private Week week;
     private LocalDateTime createdAt;
 
